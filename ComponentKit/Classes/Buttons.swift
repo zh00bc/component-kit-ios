@@ -13,6 +13,9 @@ public enum ThemeButtonStyle {
     case secondaryTransparentIcon
     case secondaryIcon
     case tertiary
+    
+    case mainSureBtn
+    case newGray
 }
 
 extension UIControl.State: Hashable {
@@ -352,6 +355,28 @@ extension ThemeButton {
             setTitleColor(.themeGray50, for: .highlighted)
             setTitleColor(.themeGray50, for: .disabled)
             setTitleColor(.black, for: .selected)
+        case .mainSureBtn:
+            applyPrimary()
+            
+            setBackgroundColor(.mainColor, forState: .normal)
+            setBackgroundColor(.mainColor, forState: .highlighted)
+            setBackgroundColor(.newGrayColor_8, forState: .disabled)
+            setBackgroundColor(.mainColor, forState: .selected)
+
+            setTitleColor(.allBgColor, for: .normal)
+            setTitleColor(.newGrayColor_50, for: .highlighted)
+            setTitleColor(.newGrayColor_50, for: .disabled)
+            
+        case .newGray:
+            applyPrimary()
+            setBackgroundColor(.newGrayColor_8, forState: .normal)
+            setBackgroundColor(.mainColor, forState: .highlighted)
+            setBackgroundColor(.newGrayColor_8, forState: .disabled)
+            setBackgroundColor(.mainColor, forState: .selected)
+
+            setTitleColor(.newGrayColor, for: .normal)
+            setTitleColor(.allBgColor, for: .highlighted)
+            setTitleColor(.allBgColor, for: .disabled)
         }
 
         return self
@@ -378,6 +403,9 @@ extension ThemeButton {
         case .secondaryTransparentIcon: return UIEdgeInsets(top: 4, left: .margin16 + .margin4, bottom: 4, right: .margin8)
         case .tertiary: return UIEdgeInsets(top: 5, left: 10, bottom: 5, right: 10)
         case .secondaryIcon: return UIEdgeInsets(top: .margin1x, left: .margin1x, bottom: .margin1x, right: .margin1x)
+            
+        case .mainSureBtn: return UIEdgeInsets(top: 5, left: 10, bottom: 5, right: 10)
+        case .newGray: return UIEdgeInsets(top: 5, left: 10, bottom: 5, right: 10)
         }
     }
 
@@ -387,6 +415,7 @@ extension ThemeButton {
         case .secondaryDefault, .secondaryTransparent, .secondaryTransparentIcon: return .subhead1
         case .tertiary: return .captionSB
         case .secondaryIcon: return .systemFont(ofSize: 1) // titleLabel should not affect button size, that is why we set smallest font
+        case .mainSureBtn, .newGray: return .textFont_16_semibold
         }
     }
 

@@ -17,6 +17,7 @@ class PinController: ThemeViewController {
 
     private var themeModeIterator = 0
     private var themeBarButtonItem: UIBarButtonItem?
+    private var mainButton = ThemeButton().apply(style: .mainSureBtn)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -127,9 +128,37 @@ class PinController: ThemeViewController {
             maker.trailing.equalToSuperview()
             maker.height.equalTo(40)
         }
-//        filterView.onSelect = { [weak self] index in
-//            print(index)
-//        }
+        
+        view.addSubview(mainButton)
+        mainButton.snp.makeConstraints { maker in
+            maker.leading.equalToSuperview().inset(16)
+            maker.top.equalTo(filterView).offset(50)
+            maker.trailing.equalToSuperview().inset(16)
+            maker.height.equalTo(44)
+        }
+        mainButton.setTitle("确认", for: .normal)
+        
+        let twoButton = CustomTwoButton.init()
+        twoButton.apply(style: .horizontal)
+        twoButton.firstButton.setTitle("取消", for: .normal)
+        twoButton.secondButton.setTitle("确认", for: .normal)
+        view.addSubview(twoButton)
+        twoButton.snp.makeConstraints { maker in
+            maker.leading.trailing.equalToSuperview()
+            maker.top.equalTo(mainButton).offset(60)
+            maker.height.equalTo(44)
+        }
+        
+        let twoButton2 = CustomTwoButton.init()
+        twoButton2.apply(style: .vertical)
+        twoButton2.firstButton.setTitle("取消", for: .normal)
+        twoButton2.secondButton.setTitle("确认", for: .normal)
+        view.addSubview(twoButton2)
+        twoButton2.snp.makeConstraints { maker in
+            maker.leading.trailing.equalToSuperview()
+            maker.top.equalTo(twoButton).offset(60)
+            maker.height.equalTo(104)
+        }
     }
 
     private func updateUI() {
@@ -140,6 +169,7 @@ class PinController: ThemeViewController {
         clearPinButton.isEnabled = isPinSet
         setPinButton.isEnabled = !isPinSet
         editPinButton.isEnabled = isPinSet
+        mainButton.isEnabled = isPinSet
     }
 
     @objc func onToggleLightMode() {
