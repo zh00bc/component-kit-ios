@@ -115,6 +115,21 @@ class PinController: ThemeViewController {
 
         primaryTestButton.apply(style: .primaryGreen)
         primaryTestButton.setImage(UIImage(named: "arrow_swap_2_24"), for: .normal)
+        
+        let titleArr = ["asdafdsfdsfdfdsf","dfsgfgfd","dsad","grthrthyhrht","hjhfgjfghfg","gfdgsqeer"]
+        
+        let filterView = FilterScrollView.init()
+        filterView.titleArr = titleArr
+        view.addSubview(filterView)
+        filterView.snp.makeConstraints { maker in
+            maker.top.equalTo(primaryTestButton).offset(100)
+            maker.leading.equalToSuperview()
+            maker.trailing.equalToSuperview()
+            maker.height.equalTo(40)
+        }
+//        filterView.onSelect = { [weak self] index in
+//            print(index)
+//        }
     }
 
     private func updateUI() {

@@ -5,20 +5,18 @@ import SnapKit
 class FontsController: ThemeViewController {
 
     private let fonts: [Font] = [
-        Font(name: "Title1", value: .title1),
-        Font(name: "Title2", value: .title2),
-        Font(name: "Title2R", value: .title2R),
-        Font(name: "Title3", value: .title3),
-        Font(name: "Headline1", value: .headline1),
-        Font(name: "Headline2", value: .headline2),
-        Font(name: "Body", value: .body),
-        Font(name: "Subhead1", value: .subhead1),
-        Font(name: "Subhead1I", value: .subhead1I),
-        Font(name: "Subhead2", value: .subhead2),
-        Font(name: "Caption", value: .caption),
-        Font(name: "CaptionSB", value: .captionSB),
-        Font(name: "Micro", value: .micro),
-        Font(name: "MicroSB", value: .microSB),
+        Font(name: "textFont_12_semibold", value: .textFont_12_semibold),
+        Font(name: "textFont_12_regular", value: .textFont_12_regular),
+        Font(name: "textFont_14_semibold", value: .textFont_14_semibold),
+        Font(name: "textFont_14_regular", value: .textFont_14_regular),
+        Font(name: "textFont_16_semibold", value: .textFont_16_semibold),
+        Font(name: "textFont_16_regular", value: .textFont_16_regular),
+        Font(name: "textFont_18_semibold", value: .textFont_18_semibold),
+        Font(name: "textFont_18_regular", value: .textFont_18_regular),
+        Font(name: "textFont_22_semibold", value: .textFont_22_semibold),
+        Font(name: "textFont_22_regular", value: .textFont_22_regular),
+        Font(name: "textFont_28_semibold", value: .textFont_28_semibold),
+        Font(name: "textFont_28_regular", value: .textFont_28_regular),
     ]
 
     private let tableView = UITableView()

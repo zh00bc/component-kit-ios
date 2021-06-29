@@ -1,6 +1,27 @@
 import UIExtensions
 
 extension UIColor {
+    public static let mainColor = UIColor(hex: 0x564CE0)
+    public static let newRedColor = UIColor(hex: 0xE0315D)
+    public static let newYellowColor = UIColor(hex: 0xE09731)
+    public static let newGreenColor = UIColor(hex: 0x16B857)
+    public static let newBlackColor = UIColor(hex: 0x2A3355)
+    public static let newGrayColor = UIColor(hex: 0x7788AA)
+    public static let mainBgColor = UIColor(hex: 0xF7F8FC)
+    public static let allBgColor = UIColor(hex: 0xFFFFFF)
+    public static let newGrayColor_80 = UIColor(hex: 0x7788AA, alpha: 0.8)
+    public static let newGrayColor_50 = UIColor(hex: 0x7788AA, alpha: 0.5)
+    public static let newGrayColor_8 = UIColor(hex: 0x7788AA, alpha: 0.08)
+    public static let newGrayColor_12 = UIColor(hex: 0x7788AA, alpha: 0.12)
+    public static let newBlackColor_80 = UIColor(hex: 0x2A3355, alpha: 0.8)
+    public static let newBlackColor_10 = UIColor(hex: 0x2A3355, alpha: 0.1)
+    public static let maskColor = UIColor(hex: 0x000000, alpha: 0.6)
+    public static let innerBorderColor = UIColor(hex: 0x7788AA, alpha: 0.16)
+}
+
+
+
+extension UIColor {
     public static let themeYellowD = UIColor(hex: 0xffa800)
     public static let themeYellowL = UIColor(hex: 0xff8a00)
     public static let themeGreenD = UIColor(hex: 0x05c46b)

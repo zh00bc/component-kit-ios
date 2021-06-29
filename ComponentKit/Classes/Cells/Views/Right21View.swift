@@ -15,10 +15,12 @@ open class Right21View: UIView {
         toggleView.snp.makeConstraints { maker in
             maker.trailing.equalToSuperview()
             maker.centerY.equalToSuperview()
+            maker.width.equalTo(36)
         }
 
         toggleView.setContentCompressionResistancePriority(.required, for: .horizontal)
-        toggleView.tintColor = .themeSteel20
+        toggleView.tintColor = .newGrayColor_12
+        toggleView.onTintColor = .mainColor
         toggleView.addTarget(self, action: #selector(onSwitch), for: .valueChanged)
 
         addSubview(button)

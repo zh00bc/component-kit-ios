@@ -5,23 +5,21 @@ import SnapKit
 class ColorsController: ThemeViewController {
 
     private let colors: [Color] = [
-        Color(name: "Jacob", value: .themeJacob),
-        Color(name: "Remus", value: .themeRemus),
-        Color(name: "Lucian", value: .themeLucian),
-        Color(name: "Oz", value: .themeOz),
-        Color(name: "Leah", value: .themeLeah),
-        Color(name: "Jeremy", value: .themeJeremy),
-        Color(name: "Elena", value: .themeElena),
-        Color(name: "Lawrence", value: .themeLawrence),
-        Color(name: "Lawrence Pressed", value: .themeLawrencePressed),
-        Color(name: "Claude", value: .themeClaude),
-        Color(name: "Andy", value: .themeAndy),
-        Color(name: "Tyler", value: .themeTyler),
-        Color(name: "Nina", value: .themeNina),
-        Color(name: "Helsing", value: .themeHelsing),
-        Color(name: "Cassandra", value: .themeCassandra),
-        Color(name: "Rains", value: .themeRaina),
-        Color(name: "Bran", value: .themeBran),
+        Color(name: "mainColor", value: .mainColor),
+        Color(name: "newRedColor", value: .newRedColor),
+        Color(name: "newGrayColor", value: .newGrayColor),
+        Color(name: "newGreenColor", value: .newGreenColor),
+        Color(name: "newBlackColor", value: .newBlackColor),
+        Color(name: "newYellowColor", value: .newYellowColor),
+        Color(name: "mainBgColor", value: .mainBgColor),
+        Color(name: "allBgColor", value: .allBgColor),
+        Color(name: "newGrayColor_80 Pressed", value: .newGrayColor_80),
+        Color(name: "newGrayColor_50", value: .newGrayColor_50),
+        Color(name: "newGrayColor_8", value: .newGrayColor_8),
+        Color(name: "newBlackColor_80", value: .newBlackColor_80),
+        Color(name: "newBlackColor_10", value: .newBlackColor_10),
+        Color(name: "innerBorderColor", value: .innerBorderColor),
+        Color(name: "maskColor", value: .maskColor),
     ]
 
     private let tableView = UITableView()
