@@ -18,4 +18,5 @@ Pod::Spec.new do |s|
 
   s.dependency 'UIExtensions.swift', '~> 1.1'
   s.dependency 'RxCocoa', '~> 5.0'
+  s.dependency 'DeviceKit'
 end
