@@ -31,7 +31,7 @@ class DeviceBridge: NSObject {
     }
 }
 
-struct CommonSize {
+public class CommonSize {
     public static let screenWidth: CGFloat = UIScreen.main.bounds.size.width
     public static let screenHeight: CGFloat = UIScreen.main.bounds.size.height
     public static var statusBarHeight: CGFloat {
