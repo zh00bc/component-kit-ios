@@ -32,51 +32,51 @@ class DeviceBridge: NSObject {
 }
 
 struct CommonSize {
-    static let screenWidth: CGFloat = UIScreen.main.bounds.size.width
-    static let screenHeight: CGFloat = UIScreen.main.bounds.size.height
-    static var statusBarHeight: CGFloat {
+    public static let screenWidth: CGFloat = UIScreen.main.bounds.size.width
+    public static let screenHeight: CGFloat = UIScreen.main.bounds.size.height
+    public static var statusBarHeight: CGFloat {
         if Device.current.hasFaceId {
             return 44
         }
         return 20
     }
-    static var topSpace: CGFloat {
+    public static var topSpace: CGFloat {
         return statusBarHeight + 44
     }
     
-    static var bottomSpace: CGFloat {
+    public static var bottomSpace: CGFloat {
         if Device.current.hasFaceId {
             return 49 + bottomSafeSpace
         }
         return 49
     }
     
-    static var bottomSafeSpace: CGFloat {
+    public static var bottomSafeSpace: CGFloat {
         if Device.current.hasFaceId {
             return 34
         }
         return 0
     }
     
-    static var topSafeSpace: CGFloat {
+    public static var topSafeSpace: CGFloat {
         if Device.current.hasFaceId {
             return 44
         }
         return 0
     }
     
-    static func autoFix(value: CGFloat) -> CGFloat {
+    public static func autoFix(value: CGFloat) -> CGFloat {
         let result:CGFloat = value*screenWidth/375
         return result
     }
     
     
-    static func widthSize() -> CGFloat {
+    public static func widthSize() -> CGFloat {
         let result:CGFloat = screenWidth/375
         return result
     }
     
-    static func heightSize() -> CGFloat {
+    public static func heightSize() -> CGFloat {
         let result:CGFloat = screenHeight/667
         return result
     }
