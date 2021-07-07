@@ -2,8 +2,8 @@ import UIKit
 import SnapKit
 
 open class G21Cell: BaseThemeCell {
-    private let leftView = LeftGView()
-    private let rightView = Right21View()
+    public let leftView = LeftGView()
+    public let rightView = Right21View()
 
     override public init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
