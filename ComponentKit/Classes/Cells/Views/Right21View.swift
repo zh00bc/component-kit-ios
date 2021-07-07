@@ -2,8 +2,8 @@ import UIKit
 import SnapKit
 
 open class Right21View: UIView {
-    private let toggleView = UISwitch()
-    private let button = UIButton()
+    public let toggleView = UISwitch()
+    public let button = UIButton()
 
     public var onToggle: ((Bool) -> ())?
     public var onTap: (() -> ())?

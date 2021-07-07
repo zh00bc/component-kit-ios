@@ -4,12 +4,12 @@ import SkeletonView
 import AlamofireImage
 
 open class LeftGView: UIView {
-    private let imageView = UIImageView()
-    private let topLabel = UILabel()
-    private let stackView = UIStackView()
-    private let leftBadgeView = BadgeView()
-    private let bottomLabel = UILabel()
-    private let rightBadgeView = BadgeView()
+    public let imageView = UIImageView()
+    public let topLabel = UILabel()
+    public let stackView = UIStackView()
+    public let leftBadgeView = BadgeView()
+    public let bottomLabel = UILabel()
+    public let rightBadgeView = BadgeView()
 
     override public init(frame: CGRect) {
         super.init(frame: frame)
