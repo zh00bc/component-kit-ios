@@ -1,7 +1,7 @@
 import UIKit
 import SnapKit
 
-public class G21Cell: BaseThemeCell {
+open class G21Cell: BaseThemeCell {
     public let leftView = LeftGView()
     public let rightView = Right21View()
 
