@@ -404,8 +404,8 @@ extension ThemeButton {
         case .tertiary: return UIEdgeInsets(top: 5, left: 10, bottom: 5, right: 10)
         case .secondaryIcon: return UIEdgeInsets(top: .margin1x, left: .margin1x, bottom: .margin1x, right: .margin1x)
             
-        case .mainSureBtn: return UIEdgeInsets(top: 5, left: 10, bottom: 5, right: 10)
-        case .newGray: return UIEdgeInsets(top: 5, left: 10, bottom: 5, right: 10)
+        case .mainSureBtn: return UIEdgeInsets(top: 13, left: 10, bottom: 13, right: 10)
+        case .newGray: return UIEdgeInsets(top: 13, left: 10, bottom: 13, right: 10)
         }
     }
 
