@@ -76,8 +76,8 @@ open class ThemeTabBarController: UITabBarController {
 
         tabBar.barTintColor = .clear
 
-        tabBar.tintColor = .themeJacob
-        tabBar.unselectedItemTintColor = .themeGray
+        tabBar.tintColor = .mainColor
+        tabBar.unselectedItemTintColor = .newGrayColor_80
 
         updateUITheme()
     }
@@ -99,7 +99,7 @@ open class ThemeTabBarController: UITabBarController {
     }
 
     private func updateUITheme() {
-        tabBar.backgroundImage = UIImage(color: .themeNavigationBarBackground)
+        tabBar.backgroundImage = UIImage(color: .allBgColor)
     }
 
 }

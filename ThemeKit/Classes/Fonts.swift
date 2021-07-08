@@ -9,8 +9,12 @@ extension UIFont {
     public static let textFont_16_regular: UIFont = .systemFont(ofSize: 16, weight: .regular)
     public static let textFont_18_semibold: UIFont = .systemFont(ofSize: 18, weight: .semibold)
     public static let textFont_18_regular: UIFont = .systemFont(ofSize: 18, weight: .regular)
+    public static let textFont_20_semibold: UIFont = .systemFont(ofSize: 20, weight: .semibold)
+    public static let textFont_20_regular: UIFont = .systemFont(ofSize: 20, weight: .regular)
     public static let textFont_22_semibold: UIFont = .systemFont(ofSize: 22, weight: .semibold)
     public static let textFont_22_regular: UIFont = .systemFont(ofSize: 22, weight: .regular)
+    public static let textFont_24_semibold: UIFont = .systemFont(ofSize: 24, weight: .semibold)
+    public static let textFont_24_regular: UIFont = .systemFont(ofSize: 24, weight: .regular)
     public static let textFont_28_semibold: UIFont = .systemFont(ofSize: 28, weight: .semibold)
     public static let textFont_28_regular: UIFont = .systemFont(ofSize: 28, weight: .regular)
 }
