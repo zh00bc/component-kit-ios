@@ -28,7 +28,7 @@ open class BottomDescriptionView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    open func bind(text: String?, textColor: UIColor? = .themeGray) {
+    open func bind(text: String?, textColor: UIColor? = .newGrayColor) {
         label.text = text
         label.textColor = textColor
     }

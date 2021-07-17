@@ -18,8 +18,8 @@ open class ThemeNavigationController: UINavigationController {
     }
 
     private func commonInit() {
-        navigationBar.prefersLargeTitles = true
-        navigationBar.tintColor = .themeJacob
+        navigationBar.prefersLargeTitles = false
+        navigationBar.tintColor = .mainColor
     }
 
     override open var childForStatusBarStyle: UIViewController? {
@@ -76,8 +76,9 @@ open class ThemeTabBarController: UITabBarController {
 
         tabBar.barTintColor = .clear
 
-        tabBar.tintColor = .mainColor
-        tabBar.unselectedItemTintColor = .newGrayColor_80
+
+        tabBar.tintColor = UIColor(hex: 0x585CC4)
+        tabBar.unselectedItemTintColor = UIColor(hex: 0x7788AA)
 
         updateUITheme()
     }
@@ -99,7 +100,7 @@ open class ThemeTabBarController: UITabBarController {
     }
 
     private func updateUITheme() {
-        tabBar.backgroundImage = UIImage(color: .allBgColor)
+        tabBar.backgroundImage = UIImage(color: UIColor.white)
     }
 
 }
@@ -117,7 +118,7 @@ open class ThemeViewController: UIViewController {
     open override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .themeTyler
+        view.backgroundColor = .white
     }
 
     override open var preferredStatusBarStyle: UIStatusBarStyle {

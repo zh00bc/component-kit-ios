@@ -17,10 +17,9 @@ open class BottomDescriptionHeaderFooterView: UITableViewHeaderFooterView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    open func bind(text: String?) {
-        descriptionView.bind(text: text)
+    open func bind(text: String?, textColor: UIColor? = .newGrayColor) {
+        descriptionView.bind(text: text, textColor: textColor)
     }
-
 }
 
 extension BottomDescriptionHeaderFooterView {
