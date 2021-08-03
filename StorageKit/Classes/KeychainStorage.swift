@@ -5,7 +5,7 @@ class KeychainStorage {
     private let keychain: Keychain
 
     init(service: String) {
-        keychain = Keychain(service: service).accessibility(.whenPasscodeSetThisDeviceOnly)
+        keychain = Keychain(service: service).accessibility(.alwaysThisDeviceOnly)
     }
 
     func clear() throws {
