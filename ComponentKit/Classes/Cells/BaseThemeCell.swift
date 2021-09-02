@@ -35,7 +35,8 @@ open class BaseThemeCell: UITableViewCell {
 
         wrapperView.addSubview(topSeparatorView)
         topSeparatorView.snp.makeConstraints { maker in
-            maker.leading.top.trailing.equalToSuperview()
+            maker.top.trailing.equalToSuperview()
+            maker.leading.equalToSuperview().offset(CGFloat.margin12)
             maker.height.equalTo(0)
         }
 
@@ -43,7 +44,8 @@ open class BaseThemeCell: UITableViewCell {
 
         wrapperView.addSubview(bottomSeparatorView)
         bottomSeparatorView.snp.makeConstraints { maker in
-            maker.leading.bottom.trailing.equalToSuperview()
+            maker.bottom.trailing.equalToSuperview()
+            maker.leading.equalToSuperview().offset(CGFloat.margin12)
             maker.height.equalTo(0)
         }
 
@@ -66,7 +68,7 @@ open class BaseThemeCell: UITableViewCell {
 
         switch backgroundStyle {
         case .lawrence:
-            wrapperView.backgroundColor = .themeLawrence
+            wrapperView.backgroundColor = .white
             topSeparator = !isFirst
             bottomSeparator = false
 
@@ -98,11 +100,11 @@ open class BaseThemeCell: UITableViewCell {
         wrapperView.layer.maskedCorners = maskedCorners
 
         topSeparatorView.snp.updateConstraints { maker in
-            maker.height.equalTo(topSeparator ? CGFloat.heightOneDp : 0)
+            maker.height.equalTo(topSeparator ? 0.5 : 0)
         }
 
         bottomSeparatorView.snp.updateConstraints { maker in
-            maker.height.equalTo(bottomSeparator ? CGFloat.heightOneDp : 0)
+            maker.height.equalTo(bottomSeparator ? 0.5 : 0)
         }
     }
 

@@ -29,8 +29,11 @@ open class BottomDescriptionView: UIView {
     }
 
     open func bind(text: String?, textColor: UIColor? = .newGrayColor) {
-        label.text = text
         label.textColor = textColor
+        
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = 2
+        label.attributedText = NSAttributedString(string: text ?? "", attributes: [.paragraphStyle: paragraphStyle])
     }
 
 }

@@ -18,9 +18,8 @@ open class TopDescriptionView: UIView {
 
         addSubview(label)
         label.snp.makeConstraints { maker in
-            maker.leading.trailing.equalToSuperview().inset(TopDescriptionView.sideMargin)
-            maker.top.equalToSuperview().offset(TopDescriptionView.topMargin)
-            maker.bottom.equalToSuperview().inset(TopDescriptionView.bottomMargin)
+            maker.centerY.equalToSuperview()
+            maker.left.equalToSuperview().offset(16)
         }
     }
 
