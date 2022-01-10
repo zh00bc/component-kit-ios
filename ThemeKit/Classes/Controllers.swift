@@ -71,14 +71,38 @@ open class ThemeTabBarController: UITabBarController {
 
         tabBar.shadowImage = UIImage()
         let separator = UIView(frame: CGRect(x: 0, y: 0, width: 10000, height: 1 / UIScreen.main.scale))
-        separator.backgroundColor = .themeSteel20
+        separator.backgroundColor = UIColor.black.withAlphaComponent(0.1)
         tabBar.addSubview(separator)
 
-        tabBar.barTintColor = .clear
+//        tabBar.barTintColor = .white
+        
+        tabBar.backgroundImage = UIImage()
+            tabBar.backgroundColor = UIColor.white
 
 
         tabBar.tintColor = UIColor(hex: 0x585CC4)
         tabBar.unselectedItemTintColor = UIColor(hex: 0x7788AA)
+        
+        if #available(iOS 15.0, *) {
+            let appearance = UITabBarAppearance()
+            appearance.shadowImage = UIImage(color: .white)
+            appearance.backgroundImage = UIImage(color: .white)
+            appearance.shadowColor = .white
+            appearance.configureWithTransparentBackground()
+            appearance.backgroundColor = .white
+            
+            appearance.stackedLayoutAppearance.normal.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(hex: 0x7788AA).withAlphaComponent(0.8)]
+            appearance.stackedLayoutAppearance.selected.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(hex: 0x564CE0)]
+            
+            appearance.inlineLayoutAppearance.normal.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(hex: 0x7788AA).withAlphaComponent(0.8)]
+            appearance.inlineLayoutAppearance.selected.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(hex: 0x564CE0)]
+            
+            appearance.compactInlineLayoutAppearance.normal.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(hex: 0x7788AA).withAlphaComponent(0.8)]
+            appearance.compactInlineLayoutAppearance.selected.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(hex: 0x564CE0)]
+            
+            tabBar.standardAppearance = appearance
+            tabBar.scrollEdgeAppearance = tabBar.standardAppearance
+        }
 
         updateUITheme()
     }
@@ -100,12 +124,14 @@ open class ThemeTabBarController: UITabBarController {
     }
 
     private func updateUITheme() {
-        tabBar.backgroundImage = UIImage(color: UIColor.white)
+//        tabBar.backgroundImage = UIImage(color: UIColor.white)
+//        tabBar.shadowImage = UIImage(color: .white)
     }
 
 }
 
-open class ThemeViewController: UIViewController {
+open class
+ThemeViewController: UIViewController {
 
     public init() {
         super.init(nibName: nil, bundle: nil)
