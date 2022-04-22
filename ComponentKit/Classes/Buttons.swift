@@ -204,7 +204,7 @@ extension ThemeButton {
     @discardableResult public func apply(style: ThemeButtonStyle) -> Self {
         self.style = style
         let applyPrimary = {
-            self.cornerRadius = 8
+            self.cornerRadius = 6
             self.titleLabel?.textAlignment = .center
         }
 
