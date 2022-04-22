@@ -54,6 +54,13 @@ open class ThemeNavigationController: UINavigationController {
         }
         super.pushViewController(viewController, animated: animated)
     }
+    
+    open override func setViewControllers(_ viewControllers: [UIViewController], animated: Bool) {
+        if viewControllers.count > 1, let vc = viewControllers.last {
+          vc.hidesBottomBarWhenPushed = true
+        }
+        super.setViewControllers(viewControllers, animated: animated)
+      }
 }
 
 open class ThemeTabBarController: UITabBarController {
