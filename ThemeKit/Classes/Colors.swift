@@ -1,7 +1,7 @@
 import UIExtensions
 
 extension UIColor {
-    public static let mainColor = UIColor(hex: 0x13A291)
+    public static let mainColor = UIColor(hex: 0x00968D)
     public static let newRedColor = UIColor(hex: 0xE0315D)
     public static let newYellowColor = UIColor(hex: 0xE09731)
     public static let newGreenColor = UIColor(hex: 0x16B857)

@@ -87,7 +87,7 @@ open class ThemeTabBarController: UITabBarController {
             tabBar.backgroundColor = UIColor.white
 
 
-        tabBar.tintColor = UIColor(hex: 0x13A291)
+        tabBar.tintColor = UIColor(hex: 0xEE9922)
         tabBar.unselectedItemTintColor = UIColor(hex: 0x778E99)
         
         if #available(iOS 15.0, *) {
@@ -99,13 +99,13 @@ open class ThemeTabBarController: UITabBarController {
             appearance.backgroundColor = .white
             
             appearance.stackedLayoutAppearance.normal.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(hex: 0x778E99)]
-            appearance.stackedLayoutAppearance.selected.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(hex: 0x13A291)]
+            appearance.stackedLayoutAppearance.selected.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(hex: 0xEE9922)]
             
             appearance.inlineLayoutAppearance.normal.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(hex: 0x778E99)]
-            appearance.inlineLayoutAppearance.selected.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(hex: 0x13A291)]
+            appearance.inlineLayoutAppearance.selected.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(hex: 0xEE9922)]
             
             appearance.compactInlineLayoutAppearance.normal.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(hex: 0x778E99)]
-            appearance.compactInlineLayoutAppearance.selected.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(hex: 0x13A291)]
+            appearance.compactInlineLayoutAppearance.selected.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(hex: 0xEE9922)]
             
             tabBar.standardAppearance = appearance
             tabBar.scrollEdgeAppearance = tabBar.standardAppearance
