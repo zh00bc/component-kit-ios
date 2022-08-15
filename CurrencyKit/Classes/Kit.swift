@@ -21,7 +21,7 @@ public class Kit {
 
         Currency(code: "BTC", symbol: "₿",   decimal: 8),
         Currency(code: "ETH", symbol: "Ξ",   decimal: 8),
-        Currency(code: "BNB", symbol: "BNB", decimal: 8),
+        Currency(code: "USDT", symbol: "$", decimal: 2),
     ]
 
     private let currencyManager: CurrencyManager
