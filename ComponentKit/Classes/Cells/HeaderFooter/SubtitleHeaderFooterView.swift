@@ -2,12 +2,16 @@ import UIKit
 import SnapKit
 
 open class SubtitleHeaderFooterView: UITableViewHeaderFooterView {
-    private let label = UILabel()
+    public let wrapperView = UIView()
+    public let label = UILabel()
 
     override public init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
-
-        addSubview(label)
+        addSubview(wrapperView)
+        wrapperView.addSubview(label)
+        wrapperView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
         label.snp.makeConstraints { maker in
             maker.leading.trailing.equalToSuperview().inset(CGFloat.margin4x)
             maker.bottom.equalToSuperview().inset(CGFloat.margin2x)
