@@ -42,16 +42,18 @@ public class LanguageManager {
     }
 
     private static var preferredLanguage: String? {
-        if let aa = Locale.preferredLanguages.first {
-            if aa.contains("zh") {
-                return "zh-Hant"
-            }
-        }
-        if let code = Bundle.main.preferredLocalizations.first(where: { availableLanguages.contains($0) }) {
-            return code
-        }
+        return "en"
+//        if let aa = Locale.preferredLanguages.first {
+//            if aa.contains("zh") {
+//                return "zh-Hant"
+//            }
+//        }
+//        if let code = Bundle.main.preferredLocalizations.first(where: { availableLanguages.contains($0) }) {
+//            return code
+//        }
+        
 
-        return nil
+//        return nil
     }
 
 }
